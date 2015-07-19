@@ -1,0 +1,74 @@
+# tb-app
+=============
+
+Simple twitch.tv chat bot written in ruby - version 0.3.1.
+
+Feature list:
+=============
+
+- Join/leave channels (channels queue is stored in database to avoid getting ban from twitch for too many actions at short peroid of time)
+- Built-in commands:
+  - !commands - list of custom commands for specific channel (from database)
+  - !join - join user channel
+  - !channels - count of channels where bot is active
+  - !leave - leave user channel
+  - !game - game set on twitch for specific channel (from twitch api)
+  - !uptime - specific channel uptime (from twitch api)
+- Store information about chat messages in database (who sent it, on which channel sent it, how many times user sent message on this channel)
+- Add/modify/delete/list custom user commands for each channel(stored in database)
+- Variables to use in custom commands: 
+  - @user@ - puts user name
+  - @channel@ - puts channel name
+  - @time@ - puts server time
+  - @count@ - puts how many times this command has been used on this channel (stored in database)
+- Time out for using forbidden words on chat
+
+Ideas to expand project:
+=============
+
+- Forbidden words stored in database for each channel
+- Different twitch users for bot if user wants it (we have to figure out how to pass oauth id to log in from other user account)
+- Timers - broadcast user specific text on his channel every few minutes (stored in database for every channel)
+- Set privileges level for every user (user, subscriber, moderator, streamer) - :jtv MODE #moderator +o moderator
+- Alert about new subscriber - :twitchnotify!twitchnotify@twitchnotify.tmi.twitch.tv PRIVMSG #channel :User_name just subscribed!
+- Alert about new follower - https://api.twitch.tv/kraken/channels/channel/follows?limit=1&direction=desc
+- Get active user list on each channel (using WHO or PART and JOIN)
+- Rewrite twitch api to use Self-describing feature without hardcoding urls (using twitch gem?)
+- WebAPP like nightbot.tv
+
+~~ REQUIERMENETNS ~~
+=============
+
+Gems:
+- mysql2 (manage database connection)
+- time_diff (for !uptime command)
+- openwferu-scheduler (to join channels from queue stored in database)
+
+Tested on:
+=============
+
+**OS:**
+- Debian 7 
+
+**Mysql:**
+- 5.5.43
+
+**Ruby:**
+- 1.9.3p194
+- 2.2.1p85
+
+Userful links:
+=============
+
+Twitch articles about irc chat:
+- http://help.twitch.tv/customer/portal/articles/1302780-twitch-irc
+- https://github.com/justintv/Twitch-API/blob/master/IRC.md
+
+Live demo:
+=============
+
+Live demo and useful hosted version can be found at:
+- http://twitch.tv/beautiful_existence
+- http://twitch.tv/bjutibot
+- http://skyots.pl
+
