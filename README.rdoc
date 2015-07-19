@@ -1,7 +1,7 @@
-# tb-app
+# BeautyBot-app
 =============
 
-Simple twitch.tv chat bot written in ruby - version 0.3.1.
+Simple twitch.tv chat bot written in ruby.
 
 Feature list:
 =============
@@ -63,12 +63,3 @@ Userful links:
 Twitch articles about irc chat:
 - http://help.twitch.tv/customer/portal/articles/1302780-twitch-irc
 - https://github.com/justintv/Twitch-API/blob/master/IRC.md
-
-Live demo:
-=============
-
-Live demo and useful hosted version can be found at:
-- http://twitch.tv/beautiful_existence
-- http://twitch.tv/bjutibot
-- http://skyots.pl
-
