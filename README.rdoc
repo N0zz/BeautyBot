@@ -1,10 +1,10 @@
-# BeautyBot-app
 =============
+# BeautyBot-app
 
 Simple twitch.tv chat bot written in ruby.
 
-Feature list:
 =============
+Feature list:
 
 - Join/leave channels (channels queue is stored in database to avoid getting ban from twitch for too many actions at short peroid of time)
 - Built-in commands:
@@ -23,8 +23,8 @@ Feature list:
   - @count@ - puts how many times this command has been used on this channel (stored in database)
 - Time out for using forbidden words on chat
 
-Ideas to expand project:
 =============
+Ideas to expand project:
 
 - Forbidden words stored in database for each channel
 - Different twitch users for bot if user wants it (we have to figure out how to pass oauth id to log in from other user account)
@@ -36,16 +36,16 @@ Ideas to expand project:
 - Rewrite twitch api to use Self-describing feature without hardcoding urls (using twitch gem?)
 - WebAPP like nightbot.tv
 
-~~ REQUIERMENETNS ~~
 =============
+~~ REQUIERMENETNS ~~
 
 Gems:
 - mysql2 (manage database connection)
 - time_diff (for !uptime command)
 - openwferu-scheduler (to join channels from queue stored in database)
 
-Tested on:
 =============
+Tested on:
 
 **OS:**
 - Debian 7 
@@ -57,9 +57,7 @@ Tested on:
 - 1.9.3p194
 - 2.2.1p85
 
-Userful links:
 =============
-
-Twitch articles about irc chat:
+Userful links:
 - http://help.twitch.tv/customer/portal/articles/1302780-twitch-irc
 - https://github.com/justintv/Twitch-API/blob/master/IRC.md
